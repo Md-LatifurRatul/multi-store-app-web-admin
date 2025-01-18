@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecom_multi_store_web_admin/views/screens/widgets/banner_button.dart';
+import 'package:ecom_multi_store_web_admin/views/screens/widgets/category_widget.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -169,6 +170,23 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Divider(
+                color: Colors.grey,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Categories',
+                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            CategoryWidget(),
           ],
         ),
       ),
